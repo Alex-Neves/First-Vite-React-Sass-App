@@ -1,0 +1,126 @@
+@mixin flexAroundCenter{
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+}
+
+.Header{
+    outline: auto, rgb(65, 114, 1);
+    background-color: rgb(56, 99, 0);
+    font-family: 'Aerodynamic', sans-serif;
+    position: relative;
+    width: 100%;
+    z-index: 1;
+    .Big-Dan-Logo{
+        width: 25vh;
+    }    
+    p{
+        display: inline-block;
+    }
+    .search-bar-container{
+        width:40%;
+        margin-bottom: 20px;
+        input[type='search']{
+            width: 100%;
+            height: 5%;
+            padding-bottom: 1vh;
+            padding-top: 1vh;
+            font-size: 2vh;
+        }
+    }
+    .items-menu{
+        @include flexAroundCenter();
+        font-size: 1.25rem;
+        flex-direction: column;
+        width: 100%;
+        .checkMeOut{
+            display: flex;
+            gap:3rem;
+            .checkItOut{
+                background-color: #000000;
+                color: #FFFFFF;
+                padding: 7px;
+            }   
+        }
+    }
+}
+
+.navbar{
+    background-color: rgb(76, 131, 4);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    @include flexAroundCenter();
+}
+
+.subnav-link{
+    font-size: 2rem;
+    border:none;
+    background: -webkit-linear-gradient(yellow, #b05200);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    &:hover{
+        background: -webkit-linear-gradient(rgb(192, 192, 0), #793800);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
+
+.sign-in-options{
+    width:max-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:10px;
+    p{
+        font-size: 1.5rem;
+    }
+    .Header-Link{
+        text-decoration: none;
+        color: black;
+        text-align: center;
+        display: inline-block;
+        font-size: 1.5rem;
+        &:hover{
+            color: rgb(86, 86, 86);
+        }
+    }
+}
+
+.Top-Header-Content{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    width:100%;
+}
+
+.shopping-stuff{
+    width:14%;
+    display: inline-block;
+    cursor:pointer;
+    .current_cart_items{
+        user-select: none;
+        font-size: 1.25rem;
+    }
+    .dropdown-cart.inactive{
+        display:none;
+    }
+    
+    .dropdown-cart.active{
+        padding-top: 2vh;
+        display: block;
+        position: absolute;
+        right:0;
+        background: -webkit-linear-gradient(yellow, #b05200);
+        width:39vh;
+        margin-right: 10px;
+    }
+    .shopicon {
+        width: 5vh;
+    }
+}
+
+.small-shopping-stuff{
+    display: none;
+}
+
+@import "./header-media.scss"

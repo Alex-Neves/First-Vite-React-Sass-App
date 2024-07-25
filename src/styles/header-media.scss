@@ -1,0 +1,101 @@
+@import 'footer.scss';
+
+@media (max-width: 1200px) {
+    .subnav-link {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 952px) {
+    .Top-Header-Content {
+        display: inline-block;
+        text-align: center;
+        width: 100%;
+        .search-bar-container {
+            width: 100%;
+        }
+    }
+    .sign-in-options {
+        display: none;
+    }
+    .shopping-stuff {
+        position: absolute;
+        right: 10%;
+        top: 10%;
+    }
+    .navbar {
+        display: none;
+    }
+    .side-nav {
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        .items {
+            display: none;
+        }
+        .Header-Link:visited {
+            color: #000000;
+        }
+    }
+    .items.active {
+        display: flex;
+        flex-direction: column;
+        justify-content: baseline;
+        align-items: center;
+        height: 100vh;
+        gap: 4vh;
+        background-color: rgb(53, 94, 0);
+        overflow: scroll;
+        .subnav-link {
+            margin-bottom: 2%;
+            font-size: 2rem;
+        }
+        .sign-in-sidenav {
+            display: inline-flex;
+            gap: 1vh;
+            align-items: center;
+            .Header-Link {
+                font-size: 3vh;
+            }
+            p {
+                font-size: 3vh;
+            }
+        }
+    }
+    .Barz {    
+        width: 5vh;
+        position: absolute;
+        left: 0;
+        margin-top: 20px;
+        margin-left: 20px;
+    }
+}
+
+@media (max-width: 664px) {
+    .Big-Dan-Logo {
+        width: 20vh;
+    }
+    .shopping-stuff{
+        display: none;
+    }
+    .small-shopping-stuff{
+        display: block;
+        position: absolute;
+        top: 50px;
+        right: 4%;
+        &:visited{
+            color: #000000;
+        }
+        .shopicon{
+            width: 5vh;
+        }
+    }
+}
+
+@media (min-width: 952px) {
+    .side-nav {
+        display: none;
+    }
+}

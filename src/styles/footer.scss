@@ -1,0 +1,68 @@
+@font-face {
+    font-family: 'Nimbus';
+    src: local(Nimbus), url(../assets/Fonts/NimbusRomNo9L-Reg.otf) format("opentype");
+}
+
+.Footer{
+    font-family: Nimbus;
+    background-color: grey;
+    color: white;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-around;
+    text-align: center;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-top: 5%;
+    padding: 0;
+    height: 20%;
+    img{
+        width: 15%;
+        margin-right: 10px;
+    }
+    h2{
+        font-size: 2rem   ;
+    }
+    .footerLink, p{
+        font-size: 1.5rem;
+        color: white;
+        text-decoration: none;
+        &.footerLink:hover{
+            color: rgb(179, 179, 179);
+        }
+    }
+    .textBlock1, .textBlock2, .textBlock3, .textBlock4{
+        display: block;
+        width:25%;
+        margin-bottom: 1%;
+    }
+}
+
+@media (max-width: 952px){
+    .Footer.inactive{
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        .textBlock2, .textBlock3{
+            display: none;
+        }
+        .textBlock1, .textBlock4{
+            display: block;
+            width:100%;
+            margin-bottom: 1%;
+        }
+        img{
+            margin-left: 5%;
+            margin-right: 5%;
+            width: 7%;
+        }
+    }
+    .Footer.active{
+        display: none;
+    }
+}
+  
+

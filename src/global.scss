@@ -1,0 +1,147 @@
+@font-face {
+    font-family: 'Aerodynamic';
+    src: local(Aerodynamic), url(./assets/Fonts/Aerodynamic-aGag.otf) format("opentype");
+}
+
+html, body{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(249, 238, 222);
+}
+
+h1{
+    font-family: 'Aerodynamic', sans-serif;
+    font-size: 4rem;
+    text-align: center;
+}
+
+.club420{
+    background: -webkit-linear-gradient(yellow, #b05200);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.broccoli{
+    background: -webkit-linear-gradient(rgb(138, 0, 111), #fda95f);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+video{
+    width: 70%;
+}
+
+.productImage{
+    width: 15%;
+}
+
+
+.sideBar{
+    display: inline;
+    font-family: 'Aerodynamic', sans-serif;
+    font-size: 1.5rem;
+    .genericLink{
+        margin-left: 10px;
+        margin-right: 10px;
+        text-decoration: none;
+        &:visited{
+            color: black;
+        }
+    }
+}
+
+.contentDivider{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-family: 'Aerodynamic', sans-serif;
+    padding: 0;
+    margin-right: 10%;
+    margin-left: 10%;
+    h2{
+        font-size: 2.5rem;
+    }
+    p{
+        font-size: 1.5rem;
+    }
+    .bigDanLogo{
+        width: 50%;
+    }
+    .funnyButton{
+        background: -webkit-linear-gradient(yellow, #b05200);
+        border: none;
+        margin-bottom: 20px;
+        height: 12vh;
+        width: 25vh;
+        font-family: Aerodynamic;
+        font-size: 2rem;
+        &:hover{
+            color: rgb(63, 63, 63);
+            background: -webkit-linear-gradient(rgb(184, 184, 0), #632e00);
+        }
+    }
+    a{
+        color: blue;
+        &:visited{
+            color: blue;
+        }
+    }
+}
+
+.newsLetter{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    width: 100%;
+    background-color: white;
+    margin-top: 5vh;
+    .submissionBox{
+        width: 100%;
+        text-align: center;
+        margin-bottom: 5vh;
+        input[type= 'email']{
+            width: 50%;
+            padding: 20px;
+            border: solid, 2px;
+            font-size: 1rem;
+            margin-right: 20px;
+        }
+        input[type= 'submit']{
+            padding: 22px;
+            color: white;
+            background-color: black;
+            font-family: Nimbus;
+        }
+    }
+}
+
+@media (max-width: 664px){
+    h1{
+        font-size: 2rem;
+    }
+    .contentDivider{
+        h2{
+            font-size: 1.5rem;
+        }
+        p{
+            font-size: 1rem;
+        }
+        .funnyButton{
+            width: 80%;
+            height: 40%;
+        }
+    }
+    .sideBar{
+        font-size: 1rem;
+    }
+    video{
+        margin-top: 10px;
+        width: 120%;
+    }
+    .newsLetter{
+        font-size: 1rem;
+    }
+}
