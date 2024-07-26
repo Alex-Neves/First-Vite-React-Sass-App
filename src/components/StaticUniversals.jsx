@@ -7,7 +7,7 @@ import Newsletter from "./Newsletter";
 
 function StaticUniversals( props ) {
   const {pathName, pageName} = props;
-  if (window.location.href != 'http://localhost:5173/'){
+  if (window.location.href != 'http://localhost:4174/'){
     useEffect(() => {
       document.title = pageName;
     }, []);

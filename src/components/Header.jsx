@@ -6,6 +6,7 @@ import { Context } from './Context';
 import Sidenav from './Sidenav';
 import Navbar from './Navbar';
 import Logo from '../assets/Images/bigdan.webp'
+import CartLogo from '../assets/Images/shopping-cart.webp'
 
 function Header() {
   const { cart } = useContext(Context);
@@ -18,7 +19,7 @@ function Header() {
           <img className='Big-Dan-Logo' alt='Big Dan Logo' src= {Logo}/>
         </Link>
         <Link className='small-shopping-stuff' to= '/cart'>
-          <img alt='Shopping Cart Icon' className='shopicon' src='src/assets/Images/shopping-cart.webp' />
+          <img alt='Shopping Cart Icon' className='shopicon' src= {CartLogo} />
           <p className='current_cart_items'>({cart.items})</p>
           </Link>
         <div className='search-bar-container'>
@@ -30,7 +31,7 @@ function Header() {
           <Link className='Header-Link' to='/registration'>Sign Up</Link>
         </div>
         <div className='shopping-stuff' onClick={() => openCart(!cartOpen)}>
-          <img alt='Shopping Cart Icon' className='shopicon' src='src/assets/Images/shopping-cart.webp' />
+          <img alt='Shopping Cart Icon' className='shopicon' src= {CartLogo} />
           <p className='current_cart_items'>({cart.items})</p>
           <div className={`dropdown-cart ${cartOpen ? 'active' : 'inactive'}`}>
             <div className='items-menu'>
