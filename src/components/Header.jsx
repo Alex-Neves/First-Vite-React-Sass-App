@@ -5,6 +5,7 @@ import '../assets/Fonts/Aerodynamic-aGag.otf';
 import { Context } from './Context';
 import Sidenav from './Sidenav';
 import Navbar from './Navbar';
+import Logo from '../assets/Images/bigdan.webp'
 
 function Header() {
   const { cart } = useContext(Context);
@@ -14,7 +15,7 @@ function Header() {
       <div className='Top-Header-Content'>
       <Sidenav/>
         <Link to='/' className='ImgLink'>
-          <img fetchpriority='high' loading='lazy' className='Big-Dan-Logo' alt='Big Dan Logo' src= 'src/assets/Images/bigdan.webp'/>
+          <img className='Big-Dan-Logo' alt='Big Dan Logo' src= {Logo}/>
         </Link>
         <Link className='small-shopping-stuff' to= '/cart'>
           <img alt='Shopping Cart Icon' className='shopicon' src='src/assets/Images/shopping-cart.webp' />
