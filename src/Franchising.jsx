@@ -2,7 +2,7 @@ import React from 'react'
 import ContextProvider from './components/Context'
 import StaticUniversals from './components/StaticUniversals'
 import { Link } from 'react-router-dom'
-import franchisingVideo from './assets/Videos/[Club 420] Franchise Opportunity! Be your own Boss.mp4'
+import franchisingVideo from './assets/Videos/Club_420_Franchising.mp4'
 
 function Franchising() {
   return (
