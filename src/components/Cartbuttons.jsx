@@ -1,6 +1,6 @@
 import React, {useContext} from 'react'
 import { Context } from './Context';
-import {itemArray} from './Shopitems'
+import { itemArray } from './Shopitems'
 
 function Cartbuttons( props ) {
     const { cart, addItem, dropItem, resetCart} = useContext(Context);

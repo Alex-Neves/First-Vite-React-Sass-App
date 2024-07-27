@@ -83,13 +83,13 @@
     .small-shopping-stuff{
         display: block;
         position: absolute;
-        top: 50px;
+        top: 10%;
         right: 4%;
         &:visited{
             color: #000000;
         }
         .shopicon{
-            width: 5vh;
+            width: 7vh;
         }
     }
 }

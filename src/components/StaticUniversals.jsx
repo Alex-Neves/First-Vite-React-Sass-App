@@ -7,7 +7,7 @@ import Newsletter from "./Newsletter";
 
 function StaticUniversals( props ) {
   const {pathName, pageName} = props;
-  if (window.location.href != 'http://localhost:4174/'){
+  if (pageName != 'Home'){
     useEffect(() => {
       document.title = pageName;
     }, []);
@@ -23,7 +23,7 @@ function StaticUniversals( props ) {
         <Sidebar path = {pathName} name = {pageName}/>
         {props.children}
         <Newsletter/>
-        <Footer className= 'footerplot'/>
+        <Footer/>
     </div>
   )
 }

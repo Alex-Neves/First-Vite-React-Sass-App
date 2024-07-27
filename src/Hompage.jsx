@@ -7,11 +7,11 @@ import { itemArray } from './components/Shopitems'
 function Homepage() {  
   return (
     <ContextProvider>
-      <StaticUniversals>
+      <StaticUniversals pageName = 'Home'>
         <div className='contentDivider'>
           <Cartbuttons/>
           {itemArray[0].itemName}
-          <img className= 'productImage' src={itemArray[0].productImage} alt ={itemArray[0].itemName}/>
+          {itemArray[0].productImage}
         </div>
       </StaticUniversals>
     </ContextProvider>
