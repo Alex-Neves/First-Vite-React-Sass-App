@@ -2,7 +2,8 @@ import React, { useState, createContext, useEffect } from "react";
 
 const Cart = {
   items: 0,
-  subtotal: 0.00
+  subtotal: 0.00,
+  specificItems: 1
 };
 
 const getInitialState = () => {

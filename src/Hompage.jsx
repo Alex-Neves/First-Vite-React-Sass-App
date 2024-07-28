@@ -8,6 +8,7 @@ function Homepage() {
   return (
     <ContextProvider>
       <StaticUniversals pageName = 'Home'>
+      <p className='ENJOY'>ENJOY FREE SHIPPING ALL MONTH LONG!!!</p>
         <div className='contentDivider'>
           <Cartbuttons/>
           {itemArray[0].itemName}

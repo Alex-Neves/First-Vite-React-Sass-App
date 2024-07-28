@@ -71,6 +71,9 @@
         margin-top: 20px;
         margin-left: 20px;
     }
+    .dropdown-cart.active{
+        width: 250px;
+    }
 }
 
 @media (max-width: 664px) {
@@ -86,6 +89,9 @@
         top: 10%;
         right: 4%;
         &:visited{
+            color: #000000;
+        }
+        p{
             color: #000000;
         }
         .shopicon{

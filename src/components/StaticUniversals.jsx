@@ -7,25 +7,33 @@ import Newsletter from "./Newsletter";
 
 function StaticUniversals( props ) {
   const {pathName, pageName} = props;
-  if (pageName != 'Home'){
-    useEffect(() => {
-      document.title = pageName;
-    }, []);
-  }
-  else{
+  if (pageName == 'Home'){
     useEffect(() => {
       document.title = "Big Dan's Hemporium";
     }, []);
+    return (
+      <div>
+          <Header/>
+          {props.children}
+          <Newsletter/>
+          <Footer/>
+      </div>
+    )
   }
-  return (
-    <div>
-        <Header/>
-        <Sidebar path = {pathName} name = {pageName}/>
-        {props.children}
-        <Newsletter/>
-        <Footer/>
-    </div>
-  )
+  else{
+    useEffect(() => {
+      document.title = pageName;
+    }, []);
+    return (
+      <div>
+          <Header/>
+          <Sidebar path = {pathName} name = {pageName}/>
+          {props.children}
+          <Newsletter/>
+          <Footer/>
+      </div>
+    )
+  }
 }
 
 export default StaticUniversals

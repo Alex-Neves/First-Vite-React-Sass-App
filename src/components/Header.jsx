@@ -25,6 +25,7 @@ function Header() {
         <div className='search-bar-container'>
           <input type='search' placeholder='What can we help you with?' />
         </div>
+        <p>{cart.specificItems}</p> 
         <div className='sign-in-options'>
           <Link className='Header-Link' to='/registration'>Register</Link>
           <p>or</p>

@@ -62,6 +62,8 @@
         background: -webkit-linear-gradient(rgb(192, 192, 0), #793800);
         background-clip: text;
         -webkit-text-fill-color: transparent;
+        border-bottom: solid;
+        border-color: black;
     }
 }
 
@@ -106,13 +108,11 @@
     }
     
     .dropdown-cart.active{
-        padding-top: 2vh;
+        padding: 10px;
         display: block;
         position: absolute;
-        right:0;
+        right: 30px;
         background: -webkit-linear-gradient(yellow, #b05200);
-        width:39vh;
-        margin-right: 10px;
     }
     .shopicon {
         width: 6vh;
