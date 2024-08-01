@@ -63,9 +63,6 @@ video{
     h2{
         font-size: 2.5rem;
     }
-    p{
-        font-size: 1.5rem;
-    }
     .bigDanLogo{
         width: 50%;
     }
@@ -128,6 +125,45 @@ video{
     font-family: Aerodynamic;
     padding-top: 10px;
     padding-bottom: 10px;
+}
+
+.standardItem{
+    display: flex;
+    flex-direction: column;
+}
+
+.cartItems{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    img{
+        margin-top: 10px;
+        width: 75px;
+    }
+}
+
+@media (max-width: 1440px){
+    .contentDivider{
+        p{
+            font-size: 1.5rem;
+        }
+    }
+}
+
+@media (min-width: 1440px){
+    .contentDivider{
+        p{
+            font-size: 2rem;
+        }
+    }
+}
+
+@media (min-width: 1800px){
+    .contentDivider{
+        p{
+            font-size: 3rem;
+        }
+    }
 }
 
 @media (max-width: 664px){

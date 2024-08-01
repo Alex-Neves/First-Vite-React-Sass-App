@@ -33,13 +33,19 @@
         font-size: 1.25rem;
         flex-direction: column;
         width: 100%;
+        cursor: auto;
         .checkMeOut{
             display: flex;
             gap:3rem;
             .checkItOut{
+                font-family: 'Aerodynamic', sans-serif;
                 background-color: #000000;
                 color: #FFFFFF;
+                border: 0;
+                font-size: 1.25rem;
+                text-decoration: none;
                 padding: 7px;
+                cursor: pointer;
             }   
         }
     }
@@ -53,8 +59,9 @@
 }
 
 .subnav-link{
+    display: inline-block;
     font-size: 2rem;
-    border:none;
+    border: none;
     background: -webkit-linear-gradient(yellow, #b05200);
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -62,8 +69,7 @@
         background: -webkit-linear-gradient(rgb(192, 192, 0), #793800);
         background-clip: text;
         -webkit-text-fill-color: transparent;
-        border-bottom: solid;
-        border-color: black;
+        text-decoration: underline;
     }
 }
 
@@ -98,7 +104,7 @@
 .shopping-stuff{
     width:14%;
     display: inline-block;
-    cursor:pointer;
+    cursor: pointer;
     .current_cart_items{
         user-select: none;
         font-size: 1.25rem;

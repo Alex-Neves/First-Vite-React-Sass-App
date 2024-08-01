@@ -1,8 +1,7 @@
-import './global.scss'
 import ContextProvider from './components/Context'
 import Cartbuttons from './components/Cartbuttons'
 import StaticUniversals from './components/StaticUniversals'
-import { itemArray } from './components/Shopitems'
+import './global.scss'
 
 function Homepage() {  
   return (
@@ -10,9 +9,8 @@ function Homepage() {
       <StaticUniversals pageName = 'Home'>
       <p className='ENJOY'>ENJOY FREE SHIPPING ALL MONTH LONG!!!</p>
         <div className='contentDivider'>
-          <Cartbuttons/>
-          {itemArray[0].itemName}
-          {itemArray[0].productImage}
+          <Cartbuttons index = {0} location = 'general'/>
+          <Cartbuttons index = {1} location = 'general'/>
         </div>
       </StaticUniversals>
     </ContextProvider>

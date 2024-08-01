@@ -3,7 +3,7 @@ import React, { useState, createContext, useEffect } from "react";
 const Cart = {
   items: 0,
   subtotal: 0.00,
-  specificItems: 1
+  selectedItemArray: [0, 0, 0, 0, 0, 0, 0, 0, 0]
 };
 
 const getInitialState = () => {
@@ -21,28 +21,36 @@ const ContextProvider = ({ children }) => {
     localStorage.setItem('The_Cart', JSON.stringify(cart))
   }, [cart])
 
-  function addItem(price){
+  function addItem(price, specificIndex){
     setCart((prevCart) => ({
       ...prevCart,
       items: prevCart.items + 1,
-      subtotal: prevCart.subtotal + price
+      subtotal: prevCart.subtotal + price,
+      selectedItemArray: prevCart.selectedItemArray.map((numberOfItems, index) =>
+        index == specificIndex ? Math.max(numberOfItems + 1, 0) : numberOfItems
+      )
     }));
-  };
+  }
 
-  function dropItem(price) {
-    setCart((prevCart) => ({
-      ...prevCart,
-      items: Math.max(prevCart.items - 1, 0),
-      subtotal: Math.max(prevCart.subtotal - price, 0) 
-    }));
-  };
+  function dropItem(price, specificIndex) {
+    if (cart.selectedItemArray[specificIndex] > 0){
+      setCart((prevCart) => ({
+        ...prevCart,
+        items: Math.max(prevCart.items - 1, 0),
+        subtotal: Math.max(prevCart.subtotal - price, 0),
+        selectedItemArray: prevCart.selectedItemArray.map((numberOfItems, index) =>
+          index == specificIndex ? Math.max(numberOfItems - 1, 0) : numberOfItems
+        )
+      }))
+    }
+    else{
+      prevCart
+    }
+  }
+    
 
   const resetCart = () => {
-    setCart(() => ({
-      ...cart,
-      items: 0,
-      subtotal: 0
-    }));
+    setCart(Cart)
   };
 
   return (
