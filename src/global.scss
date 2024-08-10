@@ -32,7 +32,8 @@ video{
 }
 
 .productImage{
-    width: 250px;
+    width: 200px;
+    height: 240px;
 }
 
 
@@ -130,15 +131,35 @@ video{
 .standardItem{
     display: flex;
     flex-direction: column;
+    align-items: center;
+    .standardButtons{
+        display: flex;
+        gap: 5px;
+        justify-content: center;
+        align-items: center;
+        button{
+            color: white;
+            background-color: black;
+            font-family: Aerodynamic;
+            font-family: 2rem;
+            width: 125px;
+            height: 30px;
+            margin-top: 5px;
+        }
+    }
 }
 
 .cartItems{
     display: flex;
     align-items: center;
     gap: 5px;
+    p{
+        width: 175px;
+    }
     img{
         margin-top: 10px;
-        width: 75px;
+        width: 60px;
+        height: 90px;
     }
 }
 
@@ -148,6 +169,13 @@ video{
             font-size: 1.5rem;
         }
     }
+}
+
+.itemsLine{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 @media (min-width: 1440px){
@@ -194,5 +222,6 @@ video{
     }
     .productImage{
         width: 150px;
+        height: 180px;
     }
 }

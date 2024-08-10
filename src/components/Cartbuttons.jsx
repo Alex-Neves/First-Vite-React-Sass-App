@@ -9,8 +9,10 @@ function Cartbuttons( props ) {
         <div className='standardItem'>
             {itemArray[props.index].itemName}
             {itemArray[props.index].productImage}
-            <button onClick={() => addItem(itemArray[props.index].itemPrice, props.index)}>add</button>
-            <button onClick={() => dropItem(itemArray[props.index].itemPrice, props.index)}>drop</button>
+            <div className='standardButtons'>            
+              <button onClick={() => addItem(itemArray[props.index].itemPrice, props.index)}>Add to Cart</button>
+              <button onClick={() => dropItem(itemArray[props.index].itemPrice, props.index)}>Drop from Cart</button>
+            </div>
         </div>
       )
     }
@@ -20,7 +22,7 @@ function Cartbuttons( props ) {
           {cart.items >= 1 && cart.selectedItemArray.map((element, index) => (
             element > 0 && (
               <div key={index} className='cartItems'>
-                {itemArray[index].itemName}
+                <p>{itemArray[index].itemName}</p>
                 {itemArray[index].productImage}
                 <button onClick={() => dropItem(itemArray[index].itemPrice, index)}>-</button>
                 {cart.selectedItemArray[index]}
@@ -28,6 +30,18 @@ function Cartbuttons( props ) {
               </div>
             )))
           }
+        </div>
+      )
+    }
+    else if (props.location == 'test'){
+      return(
+        <div className='standardItem'>
+          {itemArray[props.index].itemName[props.subIndex]}
+          {itemArray[props.index].productImage[props.subIndex]}
+          <div className='standardButtons'>            
+            <button onClick={() => addItem(itemArray[props.index].itemPrice[props.subIndex], props.index)}>Add to Cart</button>
+            <button onClick={() => dropItem(itemArray[props.index].itemPrice[props.subIndex], props.index)}>Drop from Cart</button>
+          </div>
         </div>
       )
     }

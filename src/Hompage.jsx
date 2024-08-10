@@ -9,8 +9,11 @@ function Homepage() {
       <StaticUniversals pageName = 'Home'>
       <p className='ENJOY'>ENJOY FREE SHIPPING ALL MONTH LONG!!!</p>
         <div className='contentDivider'>
-          <Cartbuttons index = {0} location = 'general'/>
-          <Cartbuttons index = {1} location = 'general'/>
+          <div className='itemsLine'>
+            <Cartbuttons index = {0} location = 'general'/>
+            <Cartbuttons index = {1} location = 'general'/>
+            <Cartbuttons index = {2} location = 'general'/>
+          </div>
         </div>
       </StaticUniversals>
     </ContextProvider>

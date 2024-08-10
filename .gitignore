@@ -14,6 +14,8 @@ lerna-debug.log*
 /package.json
 /package-lock.json
 /eslint.cjs
+/src/assets/Images
+/src/assets/Videos
 
 # Editor directories and files
 .vscode/*

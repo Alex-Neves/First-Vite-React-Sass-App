@@ -43,9 +43,6 @@ const ContextProvider = ({ children }) => {
         )
       }))
     }
-    else{
-      prevCart
-    }
   }
     
 
